@@ -25,6 +25,10 @@
         </activity>
         <activity android:name=".InsertionActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name="FetchingActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".FriendDetailsActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

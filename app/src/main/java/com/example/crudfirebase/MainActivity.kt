@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnFetchData.setOnClickListener {
+            val intent = Intent(this, FetchingActivity::class.java)
+            startActivity(intent)
         }
     }
 }
