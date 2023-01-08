@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Update"
+        android:text="Atualizar"
+        android:backgroundTint="@color/navy_blue"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Delete"
+        android:text="Deletar"
+        android:backgroundTint="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnUpdate"
@@ -51,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/teal_200">
+                android:background="@color/gray">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -95,7 +97,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/teal_200">
+                android:background="@color/gray">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -138,7 +140,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/teal_200">
+                android:background="@color/gray">
 
                 <TextView
                     android:layout_width="match_parent"

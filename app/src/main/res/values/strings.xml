@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">crudFirebase</string>
+    <string name="banco_vazio">Banco de Dados vazio!</string>
+    <string name="dados_atualizados">Dados atualizados!</string>
+    <string name="dados_deletados">Dados deletados!</string>
+    <string name="dados_inseridos">Dados inseridos com sucesso!"</string>
+    <string name="preencher">Favor preencher todos os campos!</string>
 </resources>

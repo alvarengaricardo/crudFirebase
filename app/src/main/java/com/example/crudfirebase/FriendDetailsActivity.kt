@@ -59,7 +59,7 @@ class FriendDetailsActivity : AppCompatActivity() {
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Dados deletados!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.dados_deletados, Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, FetchingActivity::class.java)
             finish()
@@ -99,7 +99,7 @@ class FriendDetailsActivity : AppCompatActivity() {
                 etEmail.text.toString()
             )
 
-            Toast.makeText(applicationContext, "Dados atualizados!", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, R.string.dados_atualizados, Toast.LENGTH_LONG).show()
 
             //we are setting updated data to our textviews
             tvName.text = etName.text.toString()

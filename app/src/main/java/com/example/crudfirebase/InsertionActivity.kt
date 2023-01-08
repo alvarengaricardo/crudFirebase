@@ -52,10 +52,10 @@ class InsertionActivity : AppCompatActivity() {
         if (flag) {
             dbRef.child(id).setValue(friend)
                 .addOnCompleteListener {
-                    Toast.makeText(this, "Dados inseridos com sucesso!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, R.string.dados_inseridos, Toast.LENGTH_LONG).show()
                 }
         } else {
-            Toast.makeText(this, "Favor preencher todos os campos!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.preencher, Toast.LENGTH_LONG).show()
         }
     }
 }

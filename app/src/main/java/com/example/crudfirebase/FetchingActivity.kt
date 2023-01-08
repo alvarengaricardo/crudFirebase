@@ -67,7 +67,7 @@ class FetchingActivity : AppCompatActivity() {
                     friendRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 } else {
-                    Toast.makeText(applicationContext, "Banco de dados vazio!", Toast.LENGTH_SHORT)
+                    Toast.makeText(applicationContext, R.string.banco_vazio, Toast.LENGTH_SHORT)
                         .show()
                     TimeUnit.SECONDS.sleep(1)
                     finish()
