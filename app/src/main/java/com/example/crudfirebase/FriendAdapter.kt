@@ -11,16 +11,17 @@ class FriendAdapter(private val empList: ArrayList<FriendModel>) :
 
     private lateinit var mListener: onItemClickListener
 
-    interface onItemClickListener{
+    interface onItemClickListener {
         fun onItemClick(position: Int)
     }
 
-    fun setOnItemClickListener(clickListener: onItemClickListener){
+    fun setOnItemClickListener(clickListener: onItemClickListener) {
         mListener = clickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.emp_list_item, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.emp_list_item, parent, false)
         return ViewHolder(itemView, mListener)
     }
 
@@ -33,10 +34,10 @@ class FriendAdapter(private val empList: ArrayList<FriendModel>) :
         return empList.size
     }
 
-    class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View, clickListener: onItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
 
-
-        val tvName : TextView = itemView.findViewById(R.id.tvName)
+        val tvName: TextView = itemView.findViewById(R.id.tvName)
 
         init {
             itemView.setOnClickListener {

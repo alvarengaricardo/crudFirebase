@@ -5,10 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
+import java.util.concurrent.TimeUnit
 
 class FetchingActivity : AppCompatActivity() {
 
@@ -49,7 +51,7 @@ class FetchingActivity : AppCompatActivity() {
                     val mAdapter = FriendAdapter(friendList)
                     friendRecyclerView.adapter = mAdapter
 
-                    mAdapter.setOnItemClickListener(object : FriendAdapter.onItemClickListener{
+                    mAdapter.setOnItemClickListener(object : FriendAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
                             val intent =
                                 Intent(this@FetchingActivity, FriendDetailsActivity::class.java)
@@ -64,11 +66,17 @@ class FetchingActivity : AppCompatActivity() {
 
                     friendRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
+                } else {
+                    Toast.makeText(applicationContext, "Banco de dados vazio!", Toast.LENGTH_SHORT)
+                        .show()
+                    TimeUnit.SECONDS.sleep(1)
+                    finish()
+
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                // implementar
             }
         })
     }
